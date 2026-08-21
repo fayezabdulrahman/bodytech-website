@@ -1,7 +1,6 @@
-import { ExternalLink } from '../components/ExternalLink'
 import { PageMeta } from '../components/PageMeta'
 import { Reveal } from '../components/Reveal'
-import { externalLinks, team } from '../data/siteContent'
+import { team } from '../data/siteContent'
 
 function getInitials(name: string) {
   return name
