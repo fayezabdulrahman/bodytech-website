@@ -29,9 +29,6 @@ export function TeamPage() {
             <p>
               Meet the therapists and instructors helping clients recover, move with confidence and build lasting strength.
             </p>
-            <ExternalLink className="text-link" href={externalLinks.clinicBooking}>
-              Check team availability
-            </ExternalLink>
           </div>
         </div>
       </section>
@@ -61,9 +58,6 @@ export function TeamPage() {
                     {member.focus.map((item) => <li key={item}>{item}</li>)}
                   </ul>
                 )}
-                <ExternalLink className="team-profile__link" href={externalLinks.clinicBooking}>
-                  View availability
-                </ExternalLink>
               </div>
             </Reveal>
           ))}
