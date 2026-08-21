@@ -506,11 +506,19 @@ address {
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: marquee 32s linear infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.marquee__group {
+  display: flex;
+  flex: none;
 }
 
 .marquee__track span {
   display: inline-flex;
+  flex: none;
   padding: 1.25rem 1.75rem;
   align-items: center;
   gap: 3.5rem;
@@ -535,10 +543,6 @@ address {
 
 .marquee--red .marquee__track i {
   background: #fff;
-}
-
-@keyframes marquee {
-  to { transform: translateX(-50%); }
 }
 
 .section-heading {
@@ -2124,6 +2128,5 @@ a:hover .image-hover img {
     transition-duration: 0.01ms !important;
   }
 
-  .marquee__track { animation: none; }
   .reveal { opacity: 1; transform: none; }
 }

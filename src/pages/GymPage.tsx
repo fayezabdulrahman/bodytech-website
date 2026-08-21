@@ -2,6 +2,7 @@ import { ExternalLink } from '../components/ExternalLink'
 import { PageCta } from '../components/PageCta'
 import { PageMeta } from '../components/PageMeta'
 import { Reveal } from '../components/Reveal'
+import { ServiceMarquee } from '../components/ServiceMarquee'
 import { externalLinks, gymProgrammes, memberships } from '../data/siteContent'
 
 export function GymPage() {
@@ -37,13 +38,11 @@ export function GymPage() {
         </div>
       </section>
 
-      <div className="marquee marquee--red" aria-label="Gym programme highlights">
-        <div className="marquee__track">
-          {[...gymProgrammes, ...gymProgrammes].map((programme, index) => (
-            <span key={`${programme.title}-${index}`}>{programme.title}<i aria-hidden="true" /></span>
-          ))}
-        </div>
-      </div>
+      <ServiceMarquee
+        items={gymProgrammes.map((programme) => programme.title)}
+        label="Gym programme highlights"
+        tone="red"
+      />
 
       <section className="section-pad gym-programmes" aria-labelledby="programmes-title">
         <div className="shell">

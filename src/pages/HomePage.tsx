@@ -3,6 +3,7 @@ import { ExternalLink } from '../components/ExternalLink'
 import { PageCta } from '../components/PageCta'
 import { PageMeta } from '../components/PageMeta'
 import { Reveal } from '../components/Reveal'
+import { ServiceMarquee } from '../components/ServiceMarquee'
 import { externalLinks, siteImages } from '../data/siteContent'
 
 const marqueeItems = [
@@ -44,13 +45,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <div className="marquee" aria-label="BodyTech services">
-        <div className="marquee__track">
-          {[...marqueeItems, ...marqueeItems].map((item, index) => (
-            <span key={`${item}-${index}`}>{item}<i aria-hidden="true" /></span>
-          ))}
-        </div>
-      </div>
+      <ServiceMarquee items={marqueeItems} label="BodyTech services" />
 
       <section className="section-pad path-section" aria-labelledby="choose-path-title">
         <div className="shell">
